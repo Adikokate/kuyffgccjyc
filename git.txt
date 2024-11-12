@@ -9,45 +9,73 @@ Key features:
 	-Merge
 	-Remote Repository
 Basic Commands:
-	-Initialize a Git Repository: git init 
-	-Check Repository Status: git Status
-	-Stage Changes: git add <file/folder> (for particular file / folder )
-					git add . (Use . to stage all changes).
-	-Commit Changes: git commit -m "Discription of changes made in your code "
-					 git commit + Enter (Possible but opens vi/vim, complex thing so ingore for now, and if entered vi/vim and want to exit then use :q! + Enter in bottom line to exit. )
-	-View Commit History: git log
-						  git log --oneline (for short uid)
-	-Clone Repo : git clone <repository-url>
+	-Initialize a Git Repository: 
+		git init 
+	-Check Repository Status: 
+		git Status
+	-Stage Changes: 
+		git add <file/folder> (for particular file / folder )
+		git add . (Use . to stage all changes).
+	-Commit Changes: 
+		git commit -m "Discription of changes made in your code "
+		git commit + Enter (Possible but opens vi/vim, complex thing so ingore for now, and if entered vi/vim and want to exit then use :q! + Enter in bottom line to exit. )
+	-View Commit History:
+		git log
+		git log --oneline (for short uid)
+	-Clone Repo :
+		git clone <repository-url> 
 Branching and Merging:
-	-List Existing Branch : git branch
-	-List All Remote Branches : git branch -r
-	-Create a New Branch: git branch <branch-name>
-	-Switch Existing Branch or version : git checkout <branch-name version uuid> (existing only)
-										git switch <branch-name>
-	-Create and Switch to a New Branch : git checkout -b <branch-name>
-										 git switch -c <new-branch-name>
+	-List Existing Branch : 
+		git branch
+	-List All Remote Branches :
+		git branch -r
+	-Create a New Branch: 
+		git branch <branch-name>
+	-Switch Existing Branch or version :
+		git checkout <branch-name version uuid> (existing only)
+		git switch <branch-name>
+	-Create and Switch to a New Branch :
+		git checkout -b <branch-name>
+		git switch -c <new-branch-name>
 	- Common checkout Commands: 
-		-Switch to a branch: git checkout <branch-name>
-		-Create and switch to a new branch: git checkout -b <new-branch-name>
-		-Discard changes in a file: git checkout -- <file>
-		-Checkout a specific commit: git checkout <commit-hash>
-		-Restore a file from a specific commit: git checkout <commit-hash> -- <file>
-	#NOTE: The switch command was introduced to simplify the process of changing branches. It avoids the potential confusion caused by the older checkout command, which had multiple purposes (switching branches, restoring files, etc.).
+		-Switch to a branch: 
+			git checkout <branch-name>
+		-Create and switch to a new branch: 
+			git checkout -b <new-branch-name>
+		-Discard changes in a file: 
+			git checkout -- <file>
+		-Checkout a specific commit: 
+			git checkout <commit-hash>
+		-Restore a file from a specific commit: 
+			git checkout <commit-hash> -- <file>
+
+	# NOTE: The switch command was introduced to simplify the process of changing branches. It avoids the potential confusion caused by the older checkout command, which had multiple purposes (switching branches, restoring files, etc.).
 	Using the switch command improves readability and makes the intent clearer when managing branches.
-	-Merge a Branch into the Current Branch : git merge <branch-name> (First commit changes and then only switch to the branch you want to merge into (i.e., main or master)).
-	-Delete a Local Branch : git branch -d <branch-name> (Use -D instead of -d to force-delete the branch if it hasn't been merged.)
-	MERGE CONFLICT: 
+
+	-Merge a Branch into the Current Branch : 
+		git merge <branch-name> (First commit changes and then only switch to the branch you want to merge into (i.e., main or master)).
+	-Delete a Local Branch : 
+		git branch -d <branch-name> (Use -D instead of -d to force-delete the branch if it hasn't been merged.)
+	
+MERGE CONFLICT:
 	Merge conflicts occur when Git cannot automatically resolve differences between branches being merged. This usually happens when the same lines of code have been changed in both branches.
 	Steps To Resolve Merge Conflicts : 
-		Initiate Merge > Identify Conflicts > Open and Edit Conflicted Files In Editor > Resolve Conflicts and Remove Markers > Stage Resolved Files > Complete Merge 
-	Way to update your branch with the latest changes from another branch (e.g., main):
-		-Switch to Your Branch: git checkout your-branch
-		-Fetch Latest Changes: git fetch main/master (When workin with remote repo)
-		-Merge Changes from Main Branch: git merge main/master
-	Or Using Rebase (Optional):
-		-Switch to Your Branch: git checkout your-branch
-		-Fetch Latest Changes: git fetch main/master
-		-Rebase onto Main Branch: git rebase main/master
+		Initiate Merge > Identify Conflicts > Open and Edit Conflicted Files In Editor > Resolve Conflicts and Remove Markers > Stage Resolved Files > Complete Merge
+
+Update your branch with the latest changes from another branch (e.g., main):
+	-Switch to Your Branch: 
+		git checkout your-branch
+	-Fetch Latest Changes: 
+		git fetch main/master (When workin with remote repo)
+	-Merge Changes from Main Branch: 
+		git merge main/master
+Or Using Rebase (Optional):
+	-Switch to Your Branch: 
+		git checkout your-branch
+	-Fetch Latest Changes: 
+		git fetch main/master
+	-Rebase onto Main Branch: 
+		git rebase main/master
 	
 GITHUB : 
 	-It is an Application 
@@ -65,22 +93,25 @@ Key features:
 	-Github pages
 	-Integrations
 
-
 Remote Repositories:
 
-Add a Remote Repository: git remote add origin <repository-url>
-Fetch from Remote Repository: git fetch
-Pull from Remote Repository: git pull (fetch & merge on your remote repo)
-Push to Remote Repository: git push 
+	-Add a Remote Repository: 
+		git remote add origin <repository-url>
+	-Fetch from Remote Repository: 
+		git fetch
+	-Pull from Remote Repository: 
+		git pull (fetch & merge on your remote repo)
+	Push to Remote Repository: 
+		git push origin main/master/your_branch
 
 Miscellaneous Commands:
-Show Changes: git diff (Shows the changes between commits, or between the working directory and staging area.)
-Discard Local Changes: git checkout -- <file>
-Remove Files: git rm <file> (Removes files from the working directory and staging area.)
-View Remote URL: git remote -v (Displays the remote repository URLs.)
 
-
-
-
-(resolved File)
+	-Show Changes: 
+		git diff (Shows the changes between commits, or between the working directory and staging area.)
+	-Discard Local Changes: 
+		git checkout -- <file>
+	-Remove Files: 
+		git rm <file> (Removes files from the working directory and staging area.)
+	-View Remote URL: 
+		git remote -v (Displays the remote repository URLs.)
 
