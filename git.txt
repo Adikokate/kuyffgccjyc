@@ -102,7 +102,7 @@ Remote Repositories:
 	-Pull from Remote Repository: 
 		git pull (fetch & merge on your remote repo)
 	Push to Remote Repository: 
-		git push origin main/master/your_branch
+		git push -u origin main/master/your_branch
 
 Miscellaneous Commands:
 
